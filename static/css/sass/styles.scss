@@ -70,3 +70,11 @@ a:hover {
 .link-grow {
     transform: scale(2);
 }
+
+.bg {
+    position: relative;
+    background-color: $background-color;
+    left: 90px;
+    width: calc(100% - 90px);
+    min-height: 100vh;
+}

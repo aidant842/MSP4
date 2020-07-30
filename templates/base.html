@@ -93,8 +93,10 @@
     </header> 
   {% endblock %}
 
+  <div class="bg">
   {% block content %}
   {% endblock %}
+  </div>
 
   {% block postloadjs %}
     <script src="{% static 'js/app.js' %}"></script>

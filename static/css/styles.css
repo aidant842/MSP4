@@ -300,4 +300,12 @@ a:hover {
   transform: scale(2);
 }
 
+.bg {
+  position: relative;
+  background-color: rgba(25, 23, 22, 0.9);
+  left: 90px;
+  width: calc(100% - 90px);
+  min-height: 100vh;
+}
+
 /*# sourceMappingURL=styles.css.map */
