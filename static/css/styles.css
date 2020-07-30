@@ -281,4 +281,23 @@ a:hover {
   display: none;
 }
 
+.cursor {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #eaeaea;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.link-grow {
+  transform: scale(2);
+}
+
 /*# sourceMappingURL=styles.css.map */
