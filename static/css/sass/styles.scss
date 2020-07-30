@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+$main-font: Montserrat;
+$secondary-font: Lato;
+$main-color: #191716;
+$font-color: #eaeaea;
+$secondary-color: #6a7fdb;
+$background-color: rgba($main-color, 0.9);
+$heading-padding-desktop: 1.8rem;
+$heading-padding-mobile: 1.2rem ;
+$heading-size-mobile: 2rem;
+
+@import 'nav';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    /* cursor: none !important; */
+}
+
+body {
+    overflow: overlay;
+    overflow-x: hidden;
+    color: $font-color;
+    font-family: $secondary-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $secondary-color !important;
+}
+
+.hidden {
+    display: none;
+}
