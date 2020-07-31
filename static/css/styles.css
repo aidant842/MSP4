@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+.buy-now-btn, .search-btn {
+  background: transparent;
+  width: 120px;
+  height: 40px;
+  color: #eaeaea;
+  border: 1px solid #6a7fdb;
+}
+
+.search-btn:hover, .buy-now-btn:hover {
+  color: #6a7fdb;
+  background: rgba(234, 234, 234, 0.9);
+}
+
 .primary-navigation {
   position: fixed;
   display: grid;
@@ -241,6 +254,47 @@ a.user-link, a.bag-link {
     justify-items: center;
   }
 }
+.landing-section {
+  display: grid;
+}
+
+.carousel img {
+  height: 550px;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 0.5rem;
+  display: grid;
+  justify-self: center;
+}
+
+.heading h1 {
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+.heading-underline {
+  /* height: 1px; */
+  width: 80vw;
+  background-color: #6a7fdb;
+  justify-self: center;
+}
+
+.category-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn {
+  justify-self: center;
+  margin-top: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -261,6 +315,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-weight: bold;
+}
+
+.logo-style {
   font-weight: bold;
 }
 
@@ -306,6 +364,16 @@ a:hover {
   left: 90px;
   width: calc(100% - 90px);
   min-height: 100vh;
+}
+
+.form-control {
+  color: #eaeaea !important;
+  background-color: transparent !important;
+  border: 1px solid #6a7fdb !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.1rem rgba(106, 127, 219, 0.25);
 }
 
 /*# sourceMappingURL=styles.css.map */
