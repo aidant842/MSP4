@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<div class="bg">
+<!-- <div class="bg"> -->
   <div class="heading">
     <h3>
       <span class="logo-style">PG</span>
@@ -23,215 +23,23 @@
   </div>
 
   <div class="gallery-content">
+  {% for product in products %}
     <div class="card">
-      <img src="images/back.JPG" class="card-img" alt="image" />
+      <img src="{{ product.image.url }}" class="card-img" alt="{{ product.name }}" />
       <div class="card-img-overlay">
         <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
+          <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
+            {{ product.description }}
           </p>
           <div class="buy-section">
-            <p class="price">€99.99</p>
+            <p class="price">€{{ product.price }}</p>
             <a class="btn buy-now-btn" href="productPage.html">Buy Now</a>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <img src="images/1.JPG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/2.JPG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/landing.jpg" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/3.JPeG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/4.JPEG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/5.JPG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/6.JPEG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/7.JPEG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/8.JPEG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/9.JPG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/10.JPEG" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/11.jpg" class="card-img" alt="image" />
-      <div class="card-img-overlay">
-        <div class="image-text">
-          <h5 class="card-title">Grass Image</h5>
-          <p class="card-text">
-            This is an image of grassThis is an image of grassThis is an image
-            of grass
-          </p>
-          <div class="buy-section">
-            <p class="price">€99.99</p>
-            <a class="btn buy-now-btn" href="">Buy Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
-</div>
+<!-- </div> -->
 {% endblock %}
