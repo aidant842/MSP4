@@ -22,19 +22,12 @@
 .card {
     border-radius: 10px;
     max-height: 275px;
+    border: none;
 }
 
 .gallery-content img {
-    height: 100%;
-    width: 100%;
-    /* width: 100% !important;
-    height: auto !important; */
-}
-
-
-.card {
-    border: none;
-    /* max-height: 255px; */
+    height: 275px;
+    width: auto;
 }
 
 .card-img-overlay {
