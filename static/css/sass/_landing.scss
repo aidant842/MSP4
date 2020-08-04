@@ -6,6 +6,15 @@
     height: 550px;
 }
 
+.carousel-caption {
+    right: revert;
+    left: revert;
+    bottom: 0;
+    z-index: revert;
+    background: rgba($main-color, 0.7);
+    width: 100%;
+}
+
 .heading {
     text-align: center;
     padding-top: 0.5rem;
