@@ -11,19 +11,31 @@
     <hr class="heading-underline" />
   </div>
 
-  <div class="category-selection">
-    <form>
+  <!-- <div class="category-selection">
+    <form method="GET" action="{% url 'products' %}">
       <div class="form-group">
         <label for="exampleFormControlSelect1">Category</label>
         <select class="form-control" id="exampleFormControlSelect1">
-          <option selected>Choose</option>
+          <option selected disabled>Choose</option>
           <option>Nature</option>
           <option>Scenery</option>
         </select>
       </div>
     </form>
-    <a class="btn search-btn" href="productPage.html">Search</a>
+    <button class="btn search-btn" type="submit">Search</button>
+  </div> -->
+
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Category
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+ {% for cat in categories %}
+    <a class="dropdown-item" href="{% url 'products' %}?category={{ cat.name }}">{{ cat.name }}</a>
+  {% endfor %}
   </div>
+</div>
+
 
   <div class="gallery-content">
   {% for product in products %}
