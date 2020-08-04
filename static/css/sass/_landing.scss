@@ -28,25 +28,19 @@
 }
 
 .heading-underline {
-    /* height: 1px; */
     width: 80vw;
     background-color: $secondary-color;
     justify-self: center;
 }
 
-.category-selection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
+.shop-section {
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
+    padding-top: 2rem;
 }
 
-.search-btn {
+.shop-now-btn {
     @extend %button-style;
     justify-self: center;
-    margin-top: 1rem;
 }
 
 .buy-now-btn {
@@ -57,6 +51,6 @@
     @extend %button-hover;
 }
 
-.search-btn:hover {
+.shop-now-btn:hover {
     @extend %button-hover;
 }

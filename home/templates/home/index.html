@@ -2,9 +2,13 @@
 <div class="landing-section">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-    {% for product in products %}
-    <div class="carousel-item {% if forloop.first %} active {% endif %}">
-        <img src="{{ product.image.url }}" class="d-block w-100" alt="{{ product.name }}" />
+      {% for product in products %}
+      <div class="carousel-item {% if forloop.first %} active {% endif %}">
+        <img
+          src="{{ product.image.url }}"
+          class="d-block w-100"
+          alt="{{ product.name }}"
+        />
         <div class="carousel-caption d-none d-md-block">
           <h5>{{ product.name }}</h5>
           <p>{{ product.description }}</p>
@@ -14,7 +18,7 @@
           </div>
         </div>
       </div>
-    {% endfor %}
+      {% endfor %}
     </div>
     <a
       class="carousel-control-prev"
@@ -42,17 +46,8 @@
     </h3>
     <hr class="heading-underline" />
   </div>
-  <div class="category-selection">
-    <form>
-      <div class="form-group">
-        <label for="category-select">Category</label>
-        <select class="form-control" id="category-select">
-          <option>Nature</option>
-          <option>Scenery</option>
-        </select>
-      </div>
-    </form>
-    <a class="btn search-btn" href="#">Search</a>
+  <div class="shop-section">
+    <a class="btn shop-now-btn" href="{% url 'products' %}">All Products</a>
   </div>
+  {% endblock %}
 </div>
-{% endblock %}
