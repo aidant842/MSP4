@@ -2,7 +2,15 @@
     display: grid;
 }
 
-.carousel img {
+/* .carousel img {
+    height: 550px;
+} */
+
+.carousel-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
     height: 550px;
 }
 

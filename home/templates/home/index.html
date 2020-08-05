@@ -3,13 +3,13 @@
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       {% for product in products %}
-      <div class="carousel-item {% if forloop.first %} active {% endif %}">
-        <img
+      <div class="carousel-item {% if forloop.first %} active {% endif %}" style="background-image: url('{{ product.image.url }}');">
+        <!-- <img
           src="{{ product.image.url }}"
           class="d-block w-100"
           alt="{{ product.name }}"
-        />
-        <div class="carousel-caption d-none d-md-block">
+        /> -->
+        <div class="carousel-caption">
           <h5>{{ product.name }}</h5>
           <p>{{ product.description }}</p>
           <div class="buy-section">
