@@ -54,6 +54,19 @@
     }
 }
 
+.dropdown {
+    display: flex;
+}
+
+.category-button {
+    @extend %button-style;
+    margin: 0 auto;
+}
+
+.category-button:hover {
+    @extend %button-hover;
+}
+
 @media only screen and (max-width: 600px) {
     .card-text {
         font-size: 10px;

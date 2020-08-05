@@ -44,7 +44,7 @@
        <header>
         <nav class="">
             <div class="primary-navigation">  
-                <a class="logo" href="index.html">
+                <a class="logo" href="{% url 'home' %}">
                     PG<span class="logo-colour">.</span>
                 </a>
 
@@ -56,13 +56,13 @@
 
                 <ul class="nav-links">
                     <li class="link">
-                        <a href="index.html">Home</a>
+                        <a href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="link">
-                        <a href="about.html">About</a>
+                        <a href="#">About</a>
                     </li>
                     <li class="link">
-                        <a href="gallery.html">Gallery</a>
+                        <a href="{% url 'products' %}">Store</a>
                     </li>
                     <li class="link">
                         <a href="#">Contact</a>
@@ -81,7 +81,7 @@
                     </li>
 
                     <li class="bag-link">
-                        <a href="""><i class="fas fa-shopping-bag"></i></a>
+                        <a href="#"><i class="fas fa-shopping-bag"></i></a>
                     </li>
                     
                 </ul>

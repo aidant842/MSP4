@@ -55,10 +55,6 @@
     @extend %button-style;
 }
 
-.buy-now-btn:hover {
-    @extend %button-hover;
-}
-
-.shop-now-btn:hover {
+.buy-now-btn:hover, .shop-now-btn:hover {
     @extend %button-hover;
 }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap");
-.buy-now-btn, .shop-now-btn {
+.category-button, .buy-now-btn, .shop-now-btn {
   background: transparent;
   width: 120px;
   height: 40px;
@@ -7,7 +7,7 @@
   border: 1px solid #6a7fdb;
 }
 
-.shop-now-btn:hover, .buy-now-btn:hover {
+.category-button:hover, .buy-now-btn:hover, .shop-now-btn:hover {
   color: #6a7fdb;
   background: rgba(234, 234, 234, 0.9);
 }
@@ -359,6 +359,14 @@ a.user-link, a.bag-link {
   display: block;
   /* border: 1px solid $secondary-color; */
   box-shadow: 0px 0px 5px 2px #6a7fdb;
+}
+
+.dropdown {
+  display: flex;
+}
+
+.category-button {
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 600px) {
