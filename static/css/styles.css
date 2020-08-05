@@ -378,6 +378,26 @@ a.user-link, a.bag-link {
     padding: 2rem 2rem 0.5rem 2rem;
   }
 }
+.productContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* padding-top: 2rem; */
+  width: 70%;
+  margin: auto;
+  grid-gap: 50px;
+  height: 80vh;
+  justify-self: center;
+  justify-content: center;
+  align-content: center;
+  /* position: absolute;
+  top: 0; */
+}
+
+.productContent img {
+  width: 100%;
+  height: auto;
+}
+
 * {
   margin: 0;
   padding: 0;

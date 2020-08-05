@@ -1,0 +1,47 @@
+        {% extends "base.html" %} {% load static %} {% block content %}
+        <div class="heading">
+            <h1>Product Page</h1>
+            <hr class="heading-underline">
+        </div>
+        
+        <div class="productContent">
+            <div class="productImage">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            </div>
+            <div class="productSelects">
+                <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Size</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Colour</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Material</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <a class="btn buy-now-btn" href="#">Add to bag</a>
+                  </form>
+            </div>
+        </div>
+        {% endblock %}
