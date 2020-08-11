@@ -27,25 +27,27 @@
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Size</label>
                       <select class="form-control" id="exampleFormControlSelect1">
-                        <option value="xs">XS(8x6)</option>
-                        <option value="s">S(10x8)</option>
-                        <option value="m">M(12x8)</option>
-                        <option value="l">L(12x10)</option>
-                        <option value="xl">XL(15x10)</option>
+                      {% for size in sizes %}
+                        <option value="size">{{ size.value }}</option>
+                      {% endfor %}
                       </select>
                     </div>
+                    {% if product.has_colour %}
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Colour</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                          <option value="colour">Colour</option>
-                          <option value="b/w">Black and White</option>
+                        {% for colour in colours %}
+                          <option value="colour">{{ colour.name }}</option>
+                        {% endfor %}
                         </select>
                       </div>
+                    {% endif %}
                       <div class="form-group">
                         <label for="exampleFormControlSelect1">Material</label>
                         <select class="form-control" id="exampleFormControlSelect1">
-                          <option value="photo">Photo Paper</option>
-                          <option value="canvas">Canvas</option>
+                        {% for material in materials %}
+                          <option value="photo">{{ material.value }}</option>
+                        {% endfor %}
                         </select>
                       </div>
                       <a class="btn buy-now-btn" href="#">Add to bag</a>

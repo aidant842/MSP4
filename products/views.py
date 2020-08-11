@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from.models import Product, Category
+from.models import Product, Category, Size, Material, Colour
 
 
 # Create your views here.
@@ -13,7 +13,6 @@ def all_products(request):
     categories = Category.objects.all()
     paginator = Paginator(products, 6)
     page = request.GET.get('page')
-
     selected_category = None
     filtered_products = None
 
@@ -46,9 +45,15 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    sizes = Size.objects.all()
+    materials = Material.objects.all()
+    colours = Colour.objects.all()
 
     context = {
-        'product': product
+        'product': product,
+        'sizes': sizes,
+        'colours': colours,
+        'materials': materials,
     }
 
     return render(request, 'products/product_detail.html', context)

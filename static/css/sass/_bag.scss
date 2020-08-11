@@ -1,0 +1,41 @@
+.bagContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 0.5fr 0.5fr 0.25fr 0.5fr 0.25fr; */
+    width: 85%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.bagContent img {
+    width: 100%;
+    height: auto;
+}
+
+.bagContent ul li {
+    list-style-type: none;
+}
+
+.bagInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bagItemQuantity {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.bagContent .keys {
+    grid-column: 1;
+    justify-self: center;
+}
+
+.bagContent .values {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.bagContent .bagItemTotal {
+    justify-self: end;
+}

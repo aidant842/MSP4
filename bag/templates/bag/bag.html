@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="heading">
+  <h1>Shopping Bag</h1>
+  <hr class="heading-underline" />
+</div>
+
+{% if bag_items %}
+
+<div class="bagContent">
+  <div class="bagImg">
+    <img src="{{ product.image.url }}" alt="" />
+  </div>
+  <div class="bagInfo">
+    <ul class="keys">
+      <li>Name:</li>
+      <li>Size:</li>
+      <li>Style:</li>
+      <li>Colour:</li>
+    </ul>
+    <ul class="values">
+      <li>{{ product.name }}</li>
+      <li>{{ product.size }}</li>
+      <li>{{ product.material }}</li>
+      <li>{{ product.colour }}</li>
+    </ul>
+  </div>
+  <div class="bagItemQuantity">
+    <ul class="bagItemPrice">
+      <li>Price</li>
+      <li>€{{ product.price }}</li>
+    </ul>
+
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Qty</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </form>
+
+    <ul class="bagItemTotal">
+      <li>Total</li>
+      <li>€99.99</li>
+    </ul>
+  </div>
+</div>
+{% else %}
+    <p>Your bag is empty.</p>
+{% endif %}
+{% endblock %}
