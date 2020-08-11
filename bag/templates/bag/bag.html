@@ -6,9 +6,9 @@
 
 {% if bag_items %}
 
-<div class="bagContent">
+<!-- <div class="bagContent">
   <div class="bagImg">
-    <img src="{{ product.image.url }}" alt="" />
+    <img src="{{ item.product.image.url }}" alt="" />
   </div>
   <div class="bagInfo">
     <ul class="keys">
@@ -18,7 +18,7 @@
       <li>Colour:</li>
     </ul>
     <ul class="values">
-      <li>{{ product.name }}</li>
+      <li>{{ item.product.name }}</li>
       <li>{{ product.size }}</li>
       <li>{{ product.material }}</li>
       <li>{{ product.colour }}</li>
@@ -48,7 +48,8 @@
       <li>€99.99</li>
     </ul>
   </div>
-</div>
+</div> -->
+{{ bag_items }}
 {% else %}
     <p>Your bag is empty.</p>
 {% endif %}

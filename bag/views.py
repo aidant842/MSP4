@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-
+from django.shortcuts import render, redirect, get_object_or_404
+from products.models import Product
 
 def view_bag(request):
     """ A view to return the bag contents page """
@@ -10,6 +10,7 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ Add a quantity of an item to the bag """
 
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = request.POST.get('size')
@@ -23,5 +24,4 @@ def add_to_bag(request, item_id):
         bag[item_id] = quantity
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
