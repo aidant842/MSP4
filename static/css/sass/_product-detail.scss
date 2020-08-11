@@ -22,6 +22,10 @@
     grid-column: 1/3;
 }
 
+.quantityLabel {
+    display: block;
+}
+
 @media only screen and (max-width: 600px) {
     .productContent {
             display: grid;
