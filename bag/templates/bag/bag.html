@@ -1,12 +1,12 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %} {% load static %} {% load tools %} {% block content %}
 <div class="heading">
   <h1>Shopping Bag</h1>
   <hr class="heading-underline" />
 </div>
 
 {% if bag_items %}
-
-<!-- <div class="bagContent">
+{% for item in bag_items %}
+<div class="bagContent">
   <div class="bagImg">
     <img src="{{ item.product.image.url }}" alt="" />
   </div>
@@ -14,43 +14,39 @@
     <ul class="keys">
       <li>Name:</li>
       <li>Size:</li>
-      <li>Style:</li>
+      <li>Material:</li>
       <li>Colour:</li>
     </ul>
     <ul class="values">
       <li>{{ item.product.name }}</li>
-      <li>{{ product.size }}</li>
-      <li>{{ product.material }}</li>
-      <li>{{ product.colour }}</li>
+      <li>{{ item.size }}</li>
+      <li>{{ item.material }}</li>
+      <li>{{ item.colour }}</li>
     </ul>
   </div>
   <div class="bagItemQuantity">
     <ul class="bagItemPrice">
       <li>Price</li>
-      <li>€{{ product.price }}</li>
+      <li>€{{ item.product.price | display_price }}</li>
     </ul>
 
-    <form>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Qty</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-    </form>
-
+    <input
+          type="number"
+          name="quantity"
+          value="{{ item.quantity }}"
+          min="1"
+          max="99"
+          data-item_id="{{ product.id }}"
+          id="id_qty_{{ product.id }}"
+        />
     <ul class="bagItemTotal">
       <li>Total</li>
-      <li>€99.99</li>
+      <li>€{{ total | display_price }}</li>
     </ul>
   </div>
-</div> -->
-{{ bag_items }}
+</div>
+{% endfor %}
 {% else %}
-    <p>Your bag is empty.</p>
+    <p>Your bag is empty. Shop <a href="{% url 'products' %}">here</a></p>
 {% endif %}
 {% endblock %}
