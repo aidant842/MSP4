@@ -9,18 +9,16 @@ from.models import Product, Category, Size, Material, Colour
 def all_products(request):
     """ A view to return the products page """
 
-    products = Product.objects.all()
+    selected_category = request.GET.get('category', None)
+
+    if selected_category:
+        products = Product.objects.filter(category__name=selected_category)
+    else:
+        products = Product.objects.all()
+
     categories = Category.objects.all()
     paginator = Paginator(products, 6)
     page = request.GET.get('page')
-    selected_category = None
-    filtered_products = None
-
-    if request.GET:
-        if 'category' in request.GET:
-            selected_category = request.GET['category']
-            filtered_products = products.filter(category__name=selected_category)
-            print(filtered_products)
 
     try:
         products = paginator.page(page)
@@ -31,7 +29,6 @@ def all_products(request):
         products = paginator.page(paginator.num_pages)
 
     context = {
-        'filtered_products': filtered_products,
         'products': products,
         'categories': categories,
         'selected_category': selected_category,
@@ -45,9 +42,9 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    colours = Colour.objects.all()
     sizes = Size.objects.all()
     materials = Material.objects.all()
-    colours = Colour.objects.all()
 
     context = {
         'product': product,

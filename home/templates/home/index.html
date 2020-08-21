@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %} {% load static %} {% load tools %} {% block content %}
 <div class="landing-section">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -13,7 +13,7 @@
           <h5>{{ product.name }}</h5>
           <p>{{ product.description }}</p>
           <div class="buy-section">
-            <p class="price">€{{ product.price }}</p>
+            <p class="price">€{{ product.price | display_price }}</p>
             <a class="btn buy-now-btn" href="{% url 'product_detail' product.id %}">Buy Now</a>
           </div>
         </div>
