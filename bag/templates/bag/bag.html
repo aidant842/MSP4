@@ -8,7 +8,9 @@
 {% for item in bag_items %}
 <div class="bagContent">
   <div class="bagImg">
-    <img src="{{ item.product.image.url }}" alt="" />
+    <a href="{% url 'product_detail' item.product.id %}">
+        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
+    </a>
   </div>
   <div class="bagInfo">
     <ul class="keys">
@@ -44,6 +46,12 @@
       <li>€{{ total | display_price }}</li>
     </ul>
   </div>
+</div>
+<div class="bagTotal">
+    <p><strong>Delivery:</strong> €{{ delivery }}</p>
+    <p><strong>Grand Total:</strong> €{{ grand_total | display_price }}</p>
+    <a href="{% url 'products' %}" class="btn keepShoppingBtn">Keep Shopping</a>
+    <a class="btn checkoutBtn">Checkout</a>
 </div>
 {% endfor %}
 {% else %}

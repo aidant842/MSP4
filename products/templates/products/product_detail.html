@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %} {% load static %} {% load tools %} {% block content %}
 <div class="heading">
   <h1>Product Page</h1>
   <hr class="heading-underline" />
@@ -33,6 +33,7 @@
   <div class="productSelects">
     <form method="POST" action="{% url 'add_to_bag' product.id %}">
       {% csrf_token %}
+      <p><strong>Price: €{{ product.price | display_price }}</strong></p>
       <div class="form-group">
         <label for="size">Size</label>
         <select class="form-control" id="size" name="size" required>

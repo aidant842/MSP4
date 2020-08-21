@@ -25,8 +25,7 @@ def bag_contents(request):
                 'colour': colour,
                 'product': product,
             })
-    print(quantity)
-    total += quantity * product.price
+        total += quantity * product.price
     grand_total = total + delivery
 
     context = {

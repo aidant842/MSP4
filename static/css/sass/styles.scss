@@ -12,7 +12,7 @@ $heading-size-mobile: 2rem;
 
 %button-style {
     background: transparent;
-    width: 120px;
+    min-width: 120px;
     height: 40px;
     color: $font-color;
     border: 1px solid $secondary-color;
@@ -117,6 +117,21 @@ a:hover {
 
 .form-control:focus {
     box-shadow: 0 0 0 0.1rem rgba($secondary-color,.25);
+}
+
+.form-control option {
+    background-color: $background-color;
+    font-family: $secondary-font;
+}
+
+input {
+    background: rgba(49, 46, 45, 0.9);
+    color: $font-color;
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+    width: 100%;
+    height: 38px;
+    padding: 0 10px;
 }
 
 .pagination {
